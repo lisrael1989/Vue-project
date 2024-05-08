@@ -1,30 +1,59 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+import SimpleCounter from "./cmps/SimpleCounter.vue"
+import AnimalList from "./cmps/AnimalList.vue"
+import SeasonClock from "./cmps/SeasonClock.vue"
+import CountDown from "./cmps/CountDown.vue"
+
+export default {
+  components: {
+    SimpleCounter,
+    SeasonClock,
+    AnimalList,
+    CountDown,
+  },
+  data() {
+    return {
+      route: "AnimalList",
+    }
+  },
+}
 </script>
 
 <template>
   <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
+    <button @click="route = 'AnimalList'">Animal List</button>
+    <button @click="route = 'SeasonClock'">Season Clock</button>
+    <button @click="route = 'CountDown'">Count Down</button>
+    <button @click="route = 'SimpleCounter'">Simple Counter</button>
   </header>
 
   <main>
-    <TheWelcome />
+    <AnimalList v-if="route === 'AnimalList'" />
+    <SeasonClock v-if="route === 'SeasonClock'" />
+    <CountDown v-if="route === 'CountDown'" />
+    <SimpleCounter v-if="route === 'SimpleCounter'" />
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
+<style lang="scss">
+main {
+  margin-top: 20px;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+header {
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px;
+
+  button {
+    &:hover {
+      background-color: rgb(70, 189, 216);
+      color: white;
+    }
+  }
 }
 
 @media (min-width: 1024px) {
