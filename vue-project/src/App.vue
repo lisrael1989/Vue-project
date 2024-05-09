@@ -3,12 +3,12 @@ import SimpleCounter from "./cmps/SimpleCounter.vue"
 import AnimalList from "./cmps/AnimalList.vue"
 import SeasonClock from "./cmps/SeasonClock.vue"
 import CountDown from "./cmps/CountDown.vue"
-import WatcherApp from "./cmps/WatcherApp.vue"
+import Watchers from "./cmps/Watchers.vue"
 
 export default {
   data() {
     return {
-      route: "WatcherApp",
+      route: "Watchers",
     }
   },
   components: {
@@ -16,7 +16,7 @@ export default {
     SeasonClock,
     AnimalList,
     CountDown,
-    WatcherApp,
+    Watchers,
   },
 }
 </script>
@@ -27,7 +27,7 @@ export default {
     <button @click="route = 'SeasonClock'">Season Clock</button>
     <button @click="route = 'CountDown'">Count Down</button>
     <button @click="route = 'SimpleCounter'">Simple Counter</button>
-    <button @click="route = 'WatcherApp'">WatcherApp</button>
+    <button @click="route = 'Watchers'">Watchers</button>
   </header>
 
   <main>
@@ -35,7 +35,7 @@ export default {
     <SeasonClock v-if="route === 'SeasonClock'" />
     <CountDown v-if="route === 'CountDown'" />
     <SimpleCounter v-if="route === 'SimpleCounter'" />
-    <WatcherApp v-if="route === 'WatcherApp'" />
+    <Watchers v-if="route === 'Watchers'" />
   </main>
 </template>
 
