@@ -54,15 +54,17 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 5px solid blue;
-  margin: 0 auto;
-  width: 200px;
-  background-color: lightblue;
+
+  margin: 30px auto;
+  width: 150px;
+  background-color: #e5e1e1;
+  box-shadow: 1px 5px 10px rgba(104, 95, 95, 0.507);
+  border-radius: 8px;
+
   h1 {
-    border: 5px solid blue;
     margin: 5px;
     padding: 5px;
-    width: 190px;
+    color: #333;
 
     &.red-text {
       color: red;
@@ -74,7 +76,7 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 10px auto;
+  margin: 20px auto;
   background-color: lightcoral;
   color: white;
   border: none;

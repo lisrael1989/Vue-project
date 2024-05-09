@@ -3,11 +3,12 @@ import SimpleCounter from "./cmps/SimpleCounter.vue"
 import AnimalList from "./cmps/AnimalList.vue"
 import SeasonClock from "./cmps/SeasonClock.vue"
 import CountDown from "./cmps/CountDown.vue"
+import WatcherApp from "./cmps/WatcherApp.vue"
 
 export default {
   data() {
     return {
-      route: "AnimalList",
+      route: "WatcherApp",
     }
   },
   components: {
@@ -15,6 +16,7 @@ export default {
     SeasonClock,
     AnimalList,
     CountDown,
+    WatcherApp,
   },
 }
 </script>
@@ -25,6 +27,7 @@ export default {
     <button @click="route = 'SeasonClock'">Season Clock</button>
     <button @click="route = 'CountDown'">Count Down</button>
     <button @click="route = 'SimpleCounter'">Simple Counter</button>
+    <button @click="route = 'WatcherApp'">WatcherApp</button>
   </header>
 
   <main>
@@ -32,6 +35,7 @@ export default {
     <SeasonClock v-if="route === 'SeasonClock'" />
     <CountDown v-if="route === 'CountDown'" />
     <SimpleCounter v-if="route === 'SimpleCounter'" />
+    <WatcherApp v-if="route === 'WatcherApp'" />
   </main>
 </template>
 
@@ -46,32 +50,19 @@ header {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  padding: 10px;
 
   button {
     cursor: pointer;
+    background-color: black;
+    color: white;
+    border-radius: 8px;
+    height: 30px;
+
     &:hover {
       background-color: rgb(70, 189, 216);
       color: white;
+      border: none;
     }
-  }
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
   }
 }
 </style>
