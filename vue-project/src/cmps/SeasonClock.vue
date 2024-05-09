@@ -14,7 +14,7 @@ export default {
       currDate: new Date(),
       isDark: false,
       currentTime: "",
-      intervalId: null,
+      // intervalId: null,
     }
   },
   methods: {
