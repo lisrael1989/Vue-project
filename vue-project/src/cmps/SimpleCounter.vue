@@ -36,10 +36,14 @@ export default {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background-color: rgb(83, 224, 235);
   padding: 10px;
   width: fit-content;
-  margin: 0 auto;
+
+  margin: 30px auto;
+  width: 100px;
+  background-color: #e5e1e1;
+  box-shadow: 1px 5px 10px rgba(104, 95, 95, 0.507);
+  border-radius: 8px;
 
   .low {
     color: red;
