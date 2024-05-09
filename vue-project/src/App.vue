@@ -5,16 +5,16 @@ import SeasonClock from "./cmps/SeasonClock.vue"
 import CountDown from "./cmps/CountDown.vue"
 
 export default {
+  data() {
+    return {
+      route: "AnimalList",
+    }
+  },
   components: {
     SimpleCounter,
     SeasonClock,
     AnimalList,
     CountDown,
-  },
-  data() {
-    return {
-      route: "AnimalList",
-    }
   },
 }
 </script>
@@ -49,6 +49,7 @@ header {
   padding: 10px;
 
   button {
+    cursor: pointer;
     &:hover {
       background-color: rgb(70, 189, 216);
       color: white;
