@@ -57,32 +57,32 @@ export default {
     this.watchers = [
       {
         _id: "u101",
-        fullName: "Popo",
-        imgUrl: "/assets/img/avatars/avatar1.png",
+        fullName: "Jasmin",
+        imgUrl: "avatars/avatar1.png",
         movies: ["IronMan", "SpiderMan"],
       },
       {
         _id: "u102",
-        fullName: "Lala",
-        imgUrl: "/assets/img/avatars/avatar2.png",
+        fullName: "Loli",
+        imgUrl: "avatars/avatar2.png",
         movies: ["Thor", "Hulk"],
       },
       {
         _id: "u103",
-        fullName: "Jaja",
-        imgUrl: "/assets/img/avatars/avatar3.png",
+        fullName: "Ali",
+        imgUrl: "avatars/avatar3.png",
         movies: ["Captain America", "AntMan"],
       },
       {
         _id: "u104",
-        fullName: "Lili",
-        imgUrl: "/assets/img/avatars/avatar4.png",
+        fullName: "Yan",
+        imgUrl: "avatars/avatar4.png",
         movies: ["Black Panther", "The Avengers"],
       },
       {
         _id: "u105",
-        fullName: "Muki",
-        imgUrl: "/assets/img/avatars/avatar5.png",
+        fullName: "Israel",
+        imgUrl: "avatars/avatar5.png",
         movies: ["Dr. Strange", "Marvels"],
       },
     ]
@@ -97,12 +97,6 @@ export default {
     <section class="watcher-index">
       <button class="btn-add" @click="onAddWatcher">Add user</button>
       <WatcherList @selected="onSelectWatcher" :watchers="watchers" @remove="onRemoveWatcher" />
-      <!-- <WatcherList
-        @selected="onSelectWatcher"
-        :watchers="watchers"
-        :onSelectWatcher="onSelectWatcher"
-        @remove="onRemoveWatcher"
-      /> -->
     </section>
 
     <WatcherModal
