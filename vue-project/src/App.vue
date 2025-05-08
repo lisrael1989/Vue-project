@@ -1,15 +1,15 @@
 <script>
-import SimpleCounter from "./cmps/SimpleCounter.vue"
-import AnimalList from "./cmps/AnimalList.vue"
-import SeasonClock from "./cmps/SeasonClock.vue"
-import CountDown from "./cmps/CountDown.vue"
-import Watchers from "./cmps/Watchers.vue"
+import SimpleCounter from './cmps/SimpleCounter.vue';
+import AnimalList from './cmps/AnimalList.vue';
+import SeasonClock from './cmps/SeasonClock.vue';
+import CountDown from './cmps/CountDown.vue';
+import Watchers from './cmps/Watchers.vue';
 
 export default {
   data() {
     return {
-      route: "Watchers",
-    }
+      route: 'AnimalList',
+    };
   },
   components: {
     SimpleCounter,
@@ -18,7 +18,7 @@ export default {
     CountDown,
     Watchers,
   },
-}
+};
 </script>
 
 <template>
